@@ -1,5 +1,4 @@
 
-```markdown
 # <p align="center">🕵️‍♂️ WIKIFACT CHECK AI</p>
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Hackathon%20Ready-success?style=for-the-badge&logo=kaggle" alt="Status">
@@ -56,7 +55,7 @@ The standalone baseline architecture developed during the primary sprint cycle, 
    ```bash
    pip install -q -U transformers accelerate gradio
 
-```
+
 
 4. Execute the main application script:
 ```bash
