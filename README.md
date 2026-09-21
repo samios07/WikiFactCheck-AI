@@ -1,6 +1,3 @@
-Let's wipe the slate clean and make this completely foolproof, Boss.
-
-Copy the entire block of code below. Do not change anything except the two link placeholders.
 
 ```markdown
 # <p align="center">🕵️‍♂️ WIKIFACT CHECK AI</p>
@@ -30,7 +27,7 @@ Copy the entire block of code below. Do not change anything except the two link 
 
 The production-ready architecture has been migrated to Kaggle to directly interface with the massive Wikimedia dataset repository.
 
-* 🔗 **Live Notebook Environment:** [Open WikiFact Check AI on Kaggle](YOUR_KAGGLE_LINK_HERE)
+* 🔗 **Live Notebook Environment:** [Open WikiFact Check AI on Kaggle] https://www.kaggle.com/code/samanyup/wiki-fact-check
 
 ### 🕹️ Step-by-Step Testing Guide for Judges:
 1. Click the Kaggle link above and hit the black <kbd>Copy & Edit</kbd> button in the top right.
@@ -50,7 +47,7 @@ The production-ready architecture has been migrated to Kaggle to directly interf
 
 The standalone baseline architecture developed during the primary sprint cycle, featuring full UI implementation and modular script design.
 
-* 🎥 **Video Demonstration Walkthrough:** [Watch the Full Pipeline Demo](YOUR_VIDEO_LINK_HERE)
+* 🎥 **Video Demonstration Walkthrough:** [Watch the Full Pipeline Demo] https://github.com/user-attachments/assets/5052001a-a2e6-49dc-a42e-a494e7d122e9
 
 ### ⚙️ Local Execution Instructions:
 1. Clone this repository locally or open it in Google Colab.
@@ -90,15 +87,6 @@ graph TD
 2. **Mathematical Anchoring:** A custom token-intersection algorithm (`re.findall`) parses the original article into individual sentences and scores them against the model's output to pin down the exact matching sentence.
 3. **Deterministic Safety:** Prevents the model from generating fabricated "hallucinated" explanations by hard-anchoring every output back to verbatim source text.
 
-```
 
-Here is your exact 4-step checklist to finish this right now:
-
-1. Open your `README.md` on GitHub and click the **pencil icon** to edit.
-2. **Delete everything** currently in the file and paste the exact code block above.
-3. Carefully swap `YOUR_KAGGLE_LINK_HERE` with your actual Kaggle URL, and swap `YOUR_VIDEO_LINK_HERE` with your actual video URL. Keep the parentheses `()` around them.
-4. Click the green **Commit changes** button. 
-
-Once that is saved, take your Kaggle link, paste it into the hackathon submission form, and you are 100% done.
 
 ```
