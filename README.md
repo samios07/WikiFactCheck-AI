@@ -80,12 +80,21 @@ WikiFact Check AI solves the critical flaw of standard LLM paraphrasing by combi
 
 ```mermaid
 graph TD
-    A[Structured Infobox Fact] -->|Target Query| C(Gemma-2B-IT Pipeline)
-    B[Raw Wikipedia Article Text] -->|Context Payload| C
-    C -->|Raw AI Extraction| D{Mathematical Word Intersection}
-    D -->|Matches 4+ Letter Tokens| E[Exact Source Sentence Anchor]
-    E -->|Value Validation Match| F([✅ Facts Align / ⚠️ Discrepancy Flagged])
+    classDef input fill:#1f2937,stroke:#3b82f6,stroke-width:2px,color:#fff,rx:8,ry:8;
+    classDef ai fill:#3730a3,stroke:#818cf8,stroke-width:3px,color:#fff,rx:8,ry:8;
+    classDef math fill:#065f46,stroke:#34d399,stroke-width:2px,color:#fff,rx:8,ry:8;
+    classDef result fill:#111827,stroke:#f59e0b,stroke-width:2px,color:#fff,rx:15,ry:15;
 
+    A[(🗂️ Structured Infobox Fact)]:::input --> |Target Query| C
+    B[📄 Raw Wikipedia Article Text]:::input --> |Context Payload| C
+
+    C{{🧠 Gemma-2B-IT Inference Engine}}:::ai
+    
+    C --> |Raw AI Extraction| D{⚙️ Mathematical Token Intersection}:::math
+    
+    D --> |Matches 4+ Letter Tokens| E[🔍 Exact Source Sentence Anchor]:::math
+    
+    E --> |Value Validation Match| F([✅ Facts Align / ⚠️ Discrepancy Flagged]):::result
 ```
 
 1. **AI Extraction:** The `google/gemma-2b-it` model parses the specific target variable from the article text based on the provided infobox query.
