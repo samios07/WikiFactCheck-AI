@@ -46,7 +46,11 @@ The production-ready architecture has been migrated to Kaggle to directly interf
 
 The standalone baseline architecture developed during the primary sprint cycle, featuring full UI implementation and modular script design.
 
-* 🎥 **Video Demonstration Walkthrough:** [Watch the Full Pipeline Demo] https://github.com/user-attachments/assets/5052001a-a2e6-49dc-a42e-a494e7d122e9
+* 🎥 **Video Demonstration Walkthrough:** [Watch the Full Pipeline Demo] 
+
+https://github.com/user-attachments/assets/52a4f55a-b966-4681-82ab-8fab9a60a5d7
+
+
 
 ### ⚙️ Local Execution Instructions:
 1. Clone this repository locally or open it in Google Colab.
