@@ -14,7 +14,7 @@ https://github.com/user-attachments/assets/5052001a-a2e6-49dc-a42e-a494e7d122e9
 
 
 ---
-
+> **Hackathon Update:** This project was successfully integrated and tested using the official [Wikimedia Structured Contents Kaggle Dataset](https://www.kaggle.com/datasets/wikimedia-foundation/wikipedia-structured-contents).
 ### 🧠 The Technical Architecture
 Standard AI fact-checking pipelines suffer from hallucination—LLMs often rewrite source material or paraphrase details, making it impossible to verify exact quotes. This project solves that vulnerability using a hybrid AI/Python architecture:
 
