@@ -12,10 +12,6 @@
 
 ---
 
-## ⚡ Quick Navigation
-- [🚀 Phase 1: Official Kaggle Deployment](#-phase-1-official-kaggle-deployment)
-- [💻 Phase 2: Original Engineering Build](#-phase-2-original-engineering-build)
-- [🧠 Core Architecture & Math Engine](#-core-architecture--math-engine)
 
 ---
 
