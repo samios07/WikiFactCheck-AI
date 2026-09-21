@@ -1,35 +1,55 @@
-# WikiFact Check AI 🕵️‍♂️
-An automated, anti-hallucination fact-checking tool using Gemma-2B and deterministic mathematical text anchoring.
-
-### ⚠️ Live Demo & Hosting Notice
-**Note:** Due to Hugging Face recently paywalling Gradio compute spaces, the live web app is hosted via Google Colab. The standard `gradio.live` link is only active while the local Colab session is running. 
-
-**Please view the full functional video demonstration below:**
-
-
-https://github.com/user-attachments/assets/5052001a-a2e6-49dc-a42e-a494e7d122e9
-
-
-
-
+# <p align="center">🕵️‍♂️ WIKIFACT CHECK AI</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Hackathon%20Ready-success?style=for-the-badge&logo=kaggle" alt="Status">
+  <img src="https://img.shields.io/badge/Model-Gemma%202B%20IT-blue?style=for-the-badge&logo=huggingface" alt="Model">
+  <img src="https://img.shields.io/badge/Dataset-Wikimedia%20Structured%20Contents-orange?style=for-the-badge&logo=wikipedia" alt="Dataset">
+</p>
 
 ---
-> **Hackathon Update:** This project was successfully integrated and tested using the official [Wikimedia Structured Contents Kaggle Dataset](https://www.kaggle.com/datasets/wikimedia-foundation/wikipedia-structured-contents).
-### 🧠 The Technical Architecture
-Standard AI fact-checking pipelines suffer from hallucination—LLMs often rewrite source material or paraphrase details, making it impossible to verify exact quotes. This project solves that vulnerability using a hybrid AI/Python architecture:
 
-* **Blind Semantic Extraction:** Google's `gemma-2b-it` is deployed via Hugging Face Transformers. The AI is denied access to the structured infobox data to prevent confirmation bias; its only job is to generate a low-token semantic guess of where the answer lives in the main text.
-* **Text Sanitization:** A Python regex pipeline physically strips hidden paragraph breaks (`\n`) from the messy Wikipedia data to prevent HTML DOM rendering failures in the frontend.
-* **Deterministic Mathematical Anchoring:** To prevent the 2B model from successfully paraphrasing the answer, a custom Python `set().intersection()` algorithm mathematically compares the AI's output tokens against the original text. The original sentence with the highest word intersection is anchored. 
-* **Boolean Validation:** Once isolated, Python executes a strict Boolean substring check against the Infobox data, completely bypassing the language model for the final verification step.
+> **🏆 Official Hackathon Submission Notice:** This project was fully ported, integrated, and validated against the official **Wikimedia Structured Contents Kaggle Dataset** to combat AI hallucinations through mathematical text anchoring.
 
-### ⚙️ Built With
-* Python
-* Google `gemma-2b-it`
-* Hugging Face Transformers
-* Gradio (UI Framework)
-* Custom CSS String Injection
+---
 
+## ⚡ Quick Navigation
+- [🚀 Phase 1: Official Kaggle Deployment](#-phase-1-official-kaggle-deployment)
+- [💻 Phase 2: Original Engineering Build](#-phase-2-original-engineering-build)
+- [🧠 Core Architecture & Math Engine](#-core-architecture--math-engine)
 
-Developed By: SAMANYU P & JEEVAN N G
-University: SAPTHAGIRI NPS UNIVERSITY
+---
+
+## 📂 Phase 1: Official Kaggle Deployment
+
+<details>
+<summary><b>👉 Click to Expand Kaggle Integration Details & Instructions</b></summary>
+
+The production-ready architecture has been migrated to Kaggle to directly interface with the massive Wikimedia dataset repository.
+
+* 🔗 **Live Notebook Environment:** [Open WikiFact Check AI on Kaggle] https://www.kaggle.com/code/samanyup/wiki-fact-check
+
+### 🕹️ Step-by-Step Testing Guide for Judges:
+1. Click the Kaggle link above and hit the black <kbd>Copy & Edit</kbd> button in the top right.
+2. In the right-hand panel, expand **Session options** and verify the **Internet** toggle is switched **ON**.
+3. Go to **Add-ons -> Secrets** at the top menu and securely attach your Hugging Face token labeled as `HF_TOKEN`.
+4. Click **Run All**. 
+5. Use the new **📂 Load Kaggle Sample** button in the Gradio interface to instantly pull raw data schemas from the Wikimedia dataset and test the anti-hallucination engine!
+
+</details>
+
+---
+
+## 💻 Phase 2: Original Local & Colab Build
+
+<details>
+<summary><b>👉 Click to Expand Original Development Build & Video Demo</b></summary>
+
+The standalone baseline architecture developed during the primary sprint cycle, featuring full UI implementation and modular script design.
+
+* 🎥 **Video Demonstration Walkthrough:** [Watch the Full Pipeline Demo] https://github.com/user-attachments/assets/5052001a-a2e6-49dc-a42e-a494e7d122e9
+
+### ⚙️ Local Execution Instructions:
+1. Clone this repository locally or open it in Google Colab.
+2. Store your Hugging Face credentials safely in your environment variables as `HF_TOKEN`.
+3. Install the required runtime packages:
+   ```bash
+   pip install -q -U transformers accelerate gradio
