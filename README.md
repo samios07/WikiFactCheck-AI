@@ -44,7 +44,13 @@ The standalone baseline architecture developed during the primary sprint cycle, 
 
 * 🎥 **Video Demonstration Walkthrough:** [Watch the Full Pipeline Demo] 
 
-https://github.com/user-attachments/assets/52a4f55a-b966-4681-82ab-8fab9a60a5d7
+
+
+https://github.com/user-attachments/assets/cd06e316-440e-4804-b5b5-e14b1f8772b0
+
+
+
+
 
 
 
